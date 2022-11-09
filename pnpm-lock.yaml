@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/react': ^1.2.2
   '@tanstack/react-router': 0.0.1-beta.2
+  '@tanstack/react-router-devtools': 0.0.1-beta.2
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
   astro: ^1.6.0
@@ -12,6 +13,7 @@ specifiers:
 dependencies:
   '@astrojs/react': 1.2.2_gqczyrwmhlwpr6z64d3xh3wv54
   '@tanstack/react-router': 0.0.1-beta.2_biqbaboplfbrettd7655fr4n2y
+  '@tanstack/react-router-devtools': 0.0.1-beta.2_g4u4fyxvpou5gwvpudg27dfr24
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.8
   astro: 1.6.5
@@ -522,6 +524,21 @@ packages:
       tsm: 2.2.2
     dev: false
 
+  /@tanstack/react-router-devtools/0.0.1-beta.2_g4u4fyxvpou5gwvpudg27dfr24:
+    resolution: {integrity: sha512-10A7WJkB4CJ5lUpUJt1r/Ys+F9nU3VSuIMPcSxnP6AHwG9i5l5dkbhDfKOiSobheQl72Cq4UCgIradfMMgUl6A==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      '@tanstack/react-router': 0.0.1-beta.2
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      '@babel/runtime': 7.20.1
+      '@tanstack/react-router': 0.0.1-beta.2_biqbaboplfbrettd7655fr4n2y
+      date-fns: 2.29.3
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /@tanstack/react-router/0.0.1-beta.2_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-Zzv7THiYDsyoI2VOsZtByARnJlIgbYwjp73PaLrldyhzIuuuFVBmPsY7HvGQDl7aZm11EIHiYID8v/sPiWx2rw==}
     engines: {node: '>=12'}
@@ -1020,6 +1037,11 @@ packages:
   /data-uri-to-buffer/4.0.0:
     resolution: {integrity: sha512-Vr3mLBA8qWmcuschSLAOogKgQ/Jwxulv3RNE4FXnYWRGujzrRWQI4m12fQqRkwX06C0KanhLr4hK+GydchZsaA==}
     engines: {node: '>= 12'}
+    dev: false
+
+  /date-fns/2.29.3:
+    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
+    engines: {node: '>=0.11'}
     dev: false
 
   /debug/4.3.4:

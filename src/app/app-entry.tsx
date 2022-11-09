@@ -4,6 +4,7 @@ import {
   createReactRouter,
   createRouteConfig,
 } from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 const AppIndex = () => {
   return (
@@ -23,16 +24,19 @@ const About = () => {
 
 const routeConfig = createRouteConfig().createChildren((createRoute) => [
   createRoute({
-    path: "app/about",
-    element: <About />,
+    path: "/",
+    element: <AppIndex />,
   }),
   createRoute({
-    path: "app/",
-    element: <AppIndex />,
+    path: "about",
+    element: <About />,
   }),
 ]);
 
-const router = createReactRouter({ routeConfig });
+const router = createReactRouter({
+  routeConfig,
+  basepath: "app",
+});
 
 const AppEntry = () => {
   return (
@@ -41,13 +45,14 @@ const AppEntry = () => {
         <div>
           <h1>App</h1>
           <nav>
-            <router.Link to="/app">Home</router.Link>{" "}
-            <router.Link to="/app/about">About</router.Link>
+            <router.Link to="/">Home</router.Link>{" "}
+            <router.Link to="/about">About</router.Link>
           </nav>
         </div>
         <hr />
         <Outlet />
       </RouterProvider>
+      <TanStackRouterDevtools router={router} />
     </>
   );
 };
