@@ -35,13 +35,15 @@ const routeConfig = createRouteConfig().createChildren((createRoute) => [
 const router = createReactRouter({ routeConfig });
 
 const AppEntry = () => {
-  console.log(router.routeTree);
   return (
     <>
       <RouterProvider router={router}>
         <div>
           <h1>App</h1>
-          <p>current route is {router.location.pathname}</p>
+          <nav>
+            <router.Link to="/app">Home</router.Link>{" "}
+            <router.Link to="/app/about">About</router.Link>
+          </nav>
         </div>
         <hr />
         <Outlet />
